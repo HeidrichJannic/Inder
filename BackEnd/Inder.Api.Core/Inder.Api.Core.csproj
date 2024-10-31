@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\DataBase\DataBase\DataBase.csproj" />
+    <ProjectReference Include="..\DataBase\DataBase.csproj" />
     <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
   </ItemGroup>
 
