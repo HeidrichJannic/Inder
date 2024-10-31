@@ -15,7 +15,7 @@ namespace Inder.API.Core.Functions
         }
 
         [Function("GetAllUser")]
-        public async Task <IActionResult> GetAllUser([HttpTrigger(AuthorizationLevel.Function, "get", Route = "users")] HttpRequest req)
+        public async Task <IActionResult> GetAllUser([HttpTrigger(AuthorizationLevel.Function, "get", Route = "user")] HttpRequest req)
         {
             try
             {
@@ -29,35 +29,7 @@ namespace Inder.API.Core.Functions
         }
 
         [Function("GetUserByID")]
-        public async Task<IActionResult> GetUserByID([HttpTrigger(AuthorizationLevel.Function, "get", Route = "users/{userID}")] HttpRequest req, int userID)
-        {
-            try
-            {
-                _logger.LogInformation("C# HTTP trigger function processed a request.");
-                return new OkObjectResult("Welcome to Azure Functions!");
-            }
-            catch (Exception ex)
-            {
-                return new BadRequestObjectResult(ex.ToString());
-            }
-        }
-
-        [Function("DeleteAllUser")]
-        public async Task<IActionResult> DeleteAllUsers([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "users")] HttpRequest req)
-        {
-            try
-            {
-                _logger.LogInformation("C# HTTP trigger function processed a request.");
-                return new OkObjectResult("Welcome to Azure Functions!");
-            }
-            catch (Exception ex)
-            {
-                return new BadRequestObjectResult(ex.ToString());
-            }
-        }
-
-        [Function("DeleteUserById")]
-        public async Task<IActionResult> DeleteUserById([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "users/{userID}")] HttpRequest req, int userID)
+        public async Task<IActionResult> GetUserById([HttpTrigger(AuthorizationLevel.Function, "get", Route = "user/{userID}")] HttpRequest req, int userId)
         {
             try
             {
@@ -71,21 +43,7 @@ namespace Inder.API.Core.Functions
         }
 
         [Function("PostUser")]
-        public async Task<IActionResult> PostUser([HttpTrigger(AuthorizationLevel.Function, "post", Route = "users")] HttpRequest req)
-        {
-            try
-            {
-                _logger.LogInformation("C# HTTP trigger function processed a request.");
-                return new OkObjectResult("Welcome to Azure Functions!");
-            }
-            catch (Exception ex)
-            {
-                return new BadRequestObjectResult(ex.ToString());
-            }
-        }
-
-        [Function("UpdateUserById")]
-        public async Task<IActionResult> UpdateUserById([HttpTrigger(AuthorizationLevel.Function, "put", Route = "users/{userID}")] HttpRequest req, int userID)
+        public async Task<IActionResult> PostUser([HttpTrigger(AuthorizationLevel.Function, "post", Route = "user")] HttpRequest req)
         {
             try
             {
