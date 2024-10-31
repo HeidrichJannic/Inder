@@ -14,9 +14,10 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.2.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore" Version="1.3.2" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.18.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
+    <ProjectReference Include="..\Inder.Api.Core\Inder.Api.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
