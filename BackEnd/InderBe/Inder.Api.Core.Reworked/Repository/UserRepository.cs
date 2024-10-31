@@ -29,10 +29,10 @@ public class UserRepository : IRepository<IUserDTO>
             Height = userData.Height,
             LookingFor = userData.LookingFor,
             Name = userData.Name,
-            ProfilePicture = userData.ProfilePicture,
+            ProfilePic = userData.ProfilePic,
             Surname = userData.Surname,
             Weight = userData.Weight,
-            Id = 0
+            ID = 0
         };
     }
 
