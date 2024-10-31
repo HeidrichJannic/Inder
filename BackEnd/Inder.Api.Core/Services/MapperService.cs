@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Inder.Contracts.User;
+using DataBase;
 //using verweise hinzufügen TODO
 
 namespace Inder.Api.Core.Services
@@ -21,7 +22,7 @@ namespace Inder.Api.Core.Services
             .ForMember(entity => entity.Weight, source => source.MapFrom(source => source.Weight))
             .ForMember(entity => entity.Gender, source => source.MapFrom(source => source.Gender))
             .ForMember(entity => entity.Bio, source => source.MapFrom(source => source.Bio))
-            .ForMember(entity => entity.ProfilePicture, source => source.MapFrom(source => source.ProfilePicture));
+            .ForMember(entity => entity.ProfilePic, source => source.MapFrom(source => source.ProfilePic));
 
             CreateMap<UserDTO, UserModel>()
            .ForMember(entity => entity.ID, source => source.MapFrom(source => source.ID))
@@ -31,12 +32,12 @@ namespace Inder.Api.Core.Services
            .ForMember(entity => entity.Height, source => source.MapFrom(source => source.Height))
            .ForMember(entity => entity.Weight, source => source.MapFrom(source => source.Weight))
            .ForMember(entity => entity.Gender, source => source.MapFrom(source => source.Gender))
-
            .ForMember(entity => entity.Bio, source => source.MapFrom(source => source.Bio))
-           .ForMember(entity => entity.ProfilePicture, source => source.MapFrom(source => source.ProfilePicture));
+           .ForMember(entity => entity.LookingFor, source => source.MapFrom(source => source.LookingFor))
+           .ForMember(entity => entity.ProfilePic, source => source.MapFrom(source => source.ProfilePic));
 
            CreateMap<UserModel, UserDTO>()
-           .ForMember(entity => entity.Id, source => source.MapFrom(source => source.ID))
+           .ForMember(entity => entity.ID, source => source.MapFrom(source => source.ID))
            .ForMember(entity => entity.Name, source => source.MapFrom(source => source.Name))
            .ForMember(entity => entity.Surname, source => source.MapFrom(source => source.Surname))
            .ForMember(entity => entity.Age, source => source.MapFrom(source => source.Age))
@@ -44,7 +45,7 @@ namespace Inder.Api.Core.Services
            .ForMember(entity => entity.Weight, source => source.MapFrom(source => source.Weight))
            .ForMember(entity => entity.Gender, source => source.MapFrom(source => source.Gender))
            .ForMember(entity => entity.Bio, source => source.MapFrom(source => source.Bio))
-           .ForMember(entity => entity.ProfilePicture, source => source.MapFrom(source => source.ProfilePicture));
+           .ForMember(entity => entity.ProfilePic, source => source.MapFrom(source => source.ProfilePic));
 
 
         }
