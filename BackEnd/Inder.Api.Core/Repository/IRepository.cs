@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inder.Contracts.User
+namespace Inder.Api.Core.Repository
 {
-    public  class UserDeleteDTO : IUserDTO
+    internal interface IRepository
     {
-        public string UserId { get; set; } 
     }
 }
