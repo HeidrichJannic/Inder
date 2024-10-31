@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Inder.Contracts.User
 {
-    internal class UserDeleteDTO : IUserDTO
+    public  class UserDeleteDTO : IUserDTO
     {
+        public string UserId { get; set; } 
     }
 }
