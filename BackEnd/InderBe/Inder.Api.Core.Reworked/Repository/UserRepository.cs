@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Inder.Contracts.User;
 using DataBase;
+using Newtonsoft.Json;
 
 namespace Inder.Api.Core.Repository;
 
@@ -28,10 +29,10 @@ public class UserRepository : IRepository<IUserDTO>
             Height = userData.Height,
             LookingFor = userData.LookingFor,
             Name = userData.Name,
-            ProfilePicture = userData.ProfilePicture,
+            ProfilePic = userData.ProfilePic,
             Surname = userData.Surname,
             Weight = userData.Weight,
-            Id = 0
+            ID = 0
         };
     }
 

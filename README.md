@@ -27,3 +27,8 @@ If you have any execution problems try:
 ```console
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
+
+How the FE looks:
+
+![image](https://github.com/user-attachments/assets/e0326d20-8277-4a5d-a1ad-745ccfb0d5e1)
+

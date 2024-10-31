@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using DataBase;
 using Inder.Contracts.User;
 using DataBase;
 //using verweise hinzufügen TODO
@@ -33,8 +34,8 @@ namespace Inder.Api.Core.Services
            .ForMember(entity => entity.Height, source => source.MapFrom(source => source.Height))
            .ForMember(entity => entity.Weight, source => source.MapFrom(source => source.Weight))
            .ForMember(entity => entity.Gender, source => source.MapFrom(source => source.Gender))
+
            .ForMember(entity => entity.Bio, source => source.MapFrom(source => source.Bio))
-           .ForMember(entity => entity.LookingFor, source => source.MapFrom(source => source.LookingFor))
            .ForMember(entity => entity.ProfilePic, source => source.MapFrom(source => source.ProfilePic));
 
            CreateMap<UserModel, UserDTO>()
@@ -46,7 +47,6 @@ namespace Inder.Api.Core.Services
            .ForMember(entity => entity.Weight, source => source.MapFrom(source => source.Weight))
            .ForMember(entity => entity.Gender, source => source.MapFrom(source => source.Gender))
            .ForMember(entity => entity.Bio, source => source.MapFrom(source => source.Bio))
-           .ForMember(entity => entity.LookingFor, source => source.MapFrom(source => source.LookingFor))
            .ForMember(entity => entity.ProfilePic, source => source.MapFrom(source => source.ProfilePic));
 
 
