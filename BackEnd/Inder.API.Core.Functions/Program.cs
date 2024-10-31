@@ -11,7 +11,8 @@ var host = new HostBuilder()
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
 
-        services.AddScoped<IRepository<IUserDTO>, UserRepository>();
+
+        services.AddSingleton<IRepository<IUserDTO>, UserRepository>();
     })
     .Build();
 
