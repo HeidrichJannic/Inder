@@ -15,7 +15,7 @@ namespace Inder.API.Core.Functions
         }
 
         [Function("GetUser")]
-        public IActionResult GetUser([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
+        public async Task <IActionResult> GetAllUser([HttpTrigger(AuthorizationLevel.Function, "get", Route = "users")] HttpRequest req)
         {
             try
             {
