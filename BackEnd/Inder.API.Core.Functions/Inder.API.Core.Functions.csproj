@@ -18,6 +18,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inder.Api.Core\Inder.Api.Core.csproj" />
+    <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inder.Api.Core.Functions", "Inder.Api.Core.Functions.csproj", "{4F3472B0-EFCC-4E83-AD13-4A3D857933A3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inder.Contracts", "..\Inder.Contracts\Inder.Contracts.csproj", "{E86873D9-2404-4661-86D4-A791141936FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inder.Api.Core", "..\Inder.Api.Core\Inder.Api.Core.csproj", "{D8069761-CF35-47F8-9F89-18E9E8D87EDB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBase", "..\DataBase\DataBase.csproj", "{40F3066D-F9F0-4D8C-971A-AA642A793B9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inder.API.Core.Functions", "..\Inder.API.Core.Functions\Inder.API.Core.Functions.csproj", "{91457A1D-C193-4B09-80AC-B7CA059D6722}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
