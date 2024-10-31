@@ -10,7 +10,7 @@ namespace Inder.Api.Core.Repository
 {
     internal class UserRepository : IRepository<IUserDTO>
     {
-        public void CreateUser(IUserDTO tempCreateUserDTO)
+        public void Add(IUserDTO tempCreateUserDTO)
         {
             UserCreateDTO userData = (UserCreateDTO)tempCreateUserDTO;
 
@@ -27,6 +27,16 @@ namespace Inder.Api.Core.Repository
                 Weight = userData.Weight,
                 Id = 0
             };
+        }
+
+        public IEnumerable<IUserDTO> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IUserDTO GetById(int Id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
