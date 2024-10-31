@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    public class Rate
+    public class RateModel
     {
-        public Rate(int fromUserId, int toUserId, bool like)
+        public RateModel(int fromUserId, int toUserId, bool like)
         {
             FromUserId = fromUserId;
             ToUserId = toUserId;
@@ -31,8 +31,8 @@ namespace DataBase
         [Required]
         public bool Like { get; set; }
 
-        public User FromUser { get; set; }
-        public User ToUser { get; set; }
+        public UserModel FromUser { get; set; }
+        public UserModel ToUser { get; set; }
     }
 
 }

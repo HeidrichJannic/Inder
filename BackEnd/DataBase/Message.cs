@@ -35,7 +35,7 @@ namespace DataBase
         [Required]
         public DateTime DateTime { get; set; }
 
-        public Convo Convo { get; set; }
-        public User FromUser { get; set; }
+        public ConvoModel Convo { get; set; }
+        public UserModel FromUser { get; set; }
     }
 }
