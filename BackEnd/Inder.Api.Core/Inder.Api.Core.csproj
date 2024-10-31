@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\" />
+    <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
