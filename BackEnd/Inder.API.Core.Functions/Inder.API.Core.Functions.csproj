@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.18.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Inder.Api.Core\Inder.Api.Core.csproj" />
     <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
   </ItemGroup>
   <ItemGroup>

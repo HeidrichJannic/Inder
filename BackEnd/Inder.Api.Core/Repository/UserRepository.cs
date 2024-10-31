@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Inder.Contracts.User;
+using Newtonsoft.Json;
 
 namespace Inder.Api.Core.Repository
 {
-    internal class UserRepository : IRepository<IUserDTO>
+    public class UserRepository : IRepository<IUserDTO>
     {
         public void Add(IUserDTO tempCreateUserDTO)
         {
@@ -31,11 +32,17 @@ namespace Inder.Api.Core.Repository
 
         public IEnumerable<IUserDTO> GetAll()
         {
-            throw new NotImplementedException();
+            List<UserModel> userModel = _dbContext.User.ToList();
+            List<UserDTO> users = new List<UserDTO>();
+            users = userModel;
+            return users;
         }
 
         public IUserDTO GetById(int Id)
         {
+            string userJsonFormat = JsonConvert.SerializeObject(_dbContext.User.Where(element => element.Id == Id).Select(i => i).FirstOrDefault());
+            UserDTO userDTO = JsonConvert.DeserializeObject<UserModel>(userJsonFormat)!;
+
             throw new NotImplementedException();
         }
     }
