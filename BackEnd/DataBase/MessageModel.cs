@@ -12,10 +12,10 @@ namespace DataBase
 
     public class Message
     {
-        public Message(int convoID,int fromUserID, string text, DateTime dateTime)
+        public Message(int convoID,int fromUserId, string text, DateTime dateTime)
         {
             ConvoID = convoID;
-            FromUserId = fromUserID;
+            FromUserId = fromUserId;
             Text = text;
             DateTime = dateTime;
         }
@@ -35,7 +35,7 @@ namespace DataBase
         [Required]
         public DateTime DateTime { get; set; }
 
-        public Convo Convo { get; set; }
-        public User FromUser { get; set; }
+        public ConvoModel Convo { get; set; }
+        public UserModel FromUser { get; set; }
     }
 }

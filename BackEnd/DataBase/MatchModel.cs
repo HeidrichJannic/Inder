@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    public class Match
+    public class MatchModel
     {
-        public Match(int firstUserId, int secondUserID, User secondUser)
+        public MatchModel(int firstUserId, int secondUserId)
         {
             FirstUserId = firstUserId;
-            SecondUser = secondUser;
-            SecondUserId = secondUserID; 
+            SecondUserId = secondUserId; 
         }
 
         [Key]
@@ -27,10 +26,10 @@ namespace DataBase
         public int SecondUserId { get; set; }
 
         // Navigation properties
-        public User FirstUser { get; set; }
-        public User SecondUser { get; set; }
+        public UserModel FirstUser { get; set; }
+        public UserModel SecondUser { get; set; }
 
-        public Convo Convo { get; set; }
+        public ConvoModel Convo { get; set; }
     }
 
 }

@@ -3,6 +3,7 @@ using Inder.Contracts.User;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Inder.Api.Core.Services;
 using Inder.API.Core;
 
 var host = new HostBuilder()
@@ -10,7 +11,7 @@ var host = new HostBuilder()
     .ConfigureServices(services =>
     {   
         //AutoMapper
-        services.AddMapper(entity => entity.AddProfile<MapperService>(), AppDomain.CurrentDomain.GetAssemblies());
+        services.AddAutoMapper(entity => entity.AddProfile<MapperService>(), AppDomain.CurrentDomain.GetAssemblies());
 
         
 

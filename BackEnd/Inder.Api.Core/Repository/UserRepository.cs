@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Inder.Contracts.User;
-using Newtonsoft.Json;
 using DataBase;
 
 namespace Inder.Api.Core.Repository;

@@ -1,15 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace DataBase
+﻿namespace DataBase
 {
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using static System.Runtime.InteropServices.JavaScript.JSType;
-    using System.Text.RegularExpressions;
 
-    public class User
+    public class UserModel
     {
-        public User(string name, string surname, Gender gender, byte[] profilePic)
+        public User(string name, string surname, Gender gender, LookingFor lookingFor, byte[] profilePic)
         {
             Name = name;
             Surname = surname;
@@ -45,10 +40,10 @@ namespace DataBase
         public byte[] ProfilePic { get; set; }
 
         // Navigation properties
-        public ICollection<Rate> RatesFromUser { get; set; }
-        public ICollection<Rate> RatesToUser { get; set; }
-        public ICollection<Match> MatchesAsFirstUser { get; set; }
-        public ICollection<Match> MatchesAsSecondUser { get; set; }
+        public ICollection<RateModel> RatesFromUser { get; set; }
+        public ICollection<RateModel> RatesToUser { get; set; }
+        public ICollection<MatchModel> MatchesAsFirstUser { get; set; }
+        public ICollection<MatchModel> MatchesAsSecondUser { get; set; }
     }
 
     public enum Gender

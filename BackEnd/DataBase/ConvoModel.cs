@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataBase
 {
-    public class Convo
+    public class ConvoModel
     {
-        public Convo(int matchID)
+        public ConvoModel(int matchID)
         {
             MatchID = matchID;
         }
@@ -16,7 +16,7 @@ namespace DataBase
         [ForeignKey("Match")]
         public int MatchID { get; set; }
 
-        public Match Match { get; set; }
+        public MatchModel Match { get; set; }
         public List<Message> Messages { get; set; }
     }
 

@@ -1,4 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Text.RegularExpressions;
+using Microsoft.Azure.Functions.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.DependencyInjection;
+
+[assembly: FunctionsStartup(typeof(DataBase.Startup))]
 
 namespace DataBase
 {
@@ -6,45 +13,50 @@ namespace DataBase
 
     public class InderDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
-        public DbSet<Rate> Rates { get; set; }
-        public DbSet<Match> Matches { get; set; }
-        public DbSet<Convo> Convos { get; set; }
+        public InderDbContext(DbContextOptions<InderDbContext> options) : base(options)
+        {
+
+        }
+
+        public DbSet<UserModel> Users { get; set; }
+        public DbSet<RateModel> Rates { get; set; }
+        public DbSet<MatchModel> Matches { get; set; }
+        public DbSet<ConvoModel> Convos { get; set; }
         public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // User-Rate Relationship
-            modelBuilder.Entity<Rate>()
+            modelBuilder.Entity<RateModel>()
                 .HasOne(r => r.FromUser)
                 .WithMany(u => u.RatesFromUser)
                 .HasForeignKey(r => r.FromUserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Rate>()
+            modelBuilder.Entity<RateModel>()
                 .HasOne(r => r.ToUser)
                 .WithMany(u => u.RatesToUser)
                 .HasForeignKey(r => r.ToUserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // User-Match Relationship
-            modelBuilder.Entity<Match>()
+            modelBuilder.Entity<MatchModel>()
                 .HasOne(m => m.FirstUser)
                 .WithMany(u => u.MatchesAsFirstUser)
                 .HasForeignKey(m => m.FirstUserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Match>()
+            modelBuilder.Entity<MatchModel>()
                 .HasOne(m => m.SecondUser)
                 .WithMany(u => u.MatchesAsSecondUser)
                 .HasForeignKey(m => m.SecondUserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // Match-Convo Relationship
-            modelBuilder.Entity<Convo>()
+            modelBuilder.Entity<ConvoModel>()
                 .HasOne(c => c.Match)
                 .WithOne(m => m.Convo)
-                .HasForeignKey<Convo>(c => c.MatchID)
+                .HasForeignKey<ConvoModel>(c => c.MatchID)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Convo-Message Relationship
@@ -61,5 +73,24 @@ namespace DataBase
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }
+    public class InderContextFactory : IDesignTimeDbContextFactory<InderDbContext>
+    {
+        public InderDbContext CreateDbContext(string[] args)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<InderDbContext>();
+            optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("connectionString"));
 
+            return new InderDbContext(optionsBuilder.Options);
+        }
+    }
+
+    public class Startup : FunctionsStartup
+    {
+        public override void Configure(IFunctionsHostBuilder builder)
+        {
+            string SqlConnection = Environment.GetEnvironmentVariable("connectionString");
+            builder.Services.AddDbContext<InderDbContext>(
+                options => options.UseSqlServer(SqlConnection));
+        }
+    }
 }

@@ -1,7 +1,8 @@
 {
     "IsEncrypted": false,
-    "Values": {
-        "AzureWebJobsStorage": "",
-        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
-    }
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "connectionString": "Server=tcp:planbtraineeserver.database.windows.net,1433;Initial Catalog=PlanBTrainee;Persist Security Info=False;User ID=planBTrainee;Password=Hallo123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;"
+  }
 }

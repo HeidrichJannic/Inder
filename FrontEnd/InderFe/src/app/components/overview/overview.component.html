@@ -1,0 +1,11 @@
+<div class="card">
+    <img [src]="user?.profilePic">
+    <div class="card-info">
+        <div class="name-age">{{ user?.name }}, {{ user?.age }}</div>
+        <div class="buttons">
+            <button (click)="return()" class="button return-button">↩</button>
+            <button (click)="dislike()" class="button dislike-button">✘</button>
+            <button (click)="like()" class="button like-button">❤</button>
+        </div>
+    </div>
+</div>
