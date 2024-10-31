@@ -10,9 +10,9 @@ namespace DataBase
     using System.ComponentModel.DataAnnotations.Schema;
     using System.ComponentModel.DataAnnotations;
 
-    public class MessageModel
+    public class Message
     {
-        public MessageModel(int convoID,int fromUserId, string text, DateTime dateTime)
+        public Message(int convoID,int fromUserId, string text, DateTime dateTime)
         {
             ConvoID = convoID;
             FromUserId = fromUserId;
