@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JfkpuScDVL5u2+P4D9cuQpvrwEjQ6y14eoPwm0sGnuBWy3+jB03866Wsg6vIr9j0M9l/dxaLDhvj/PdePcSvAg==",
+  "dgSpecHash": "haCh62DVPFUttwtBbn2k3ofRoZeFUV7mQdkDLxdpn40kSlsi8zWKu34WpD/UoGkpbm2wZgj34P+lr3RKNMhYTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj",
+  "projectFilePath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\GitHub\\BackEnd\\InderBe\\InderBe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\google.protobuf\\3.25.2\\google.protobuf.3.25.2.nupkg.sha512",
@@ -22,6 +22,8 @@
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.core\\1.19.0\\microsoft.azure.functions.worker.core.1.19.0.nupkg.sha512",
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.abstractions\\1.3.0\\microsoft.azure.functions.worker.extensions.abstractions.1.3.0.nupkg.sha512",
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.http\\3.1.0\\microsoft.azure.functions.worker.extensions.http.3.1.0.nupkg.sha512",
+    "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.http.aspnetcore\\1.2.1\\microsoft.azure.functions.worker.extensions.http.aspnetcore.1.2.1.nupkg.sha512",
+    "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers\\1.0.2\\microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers.1.0.2.nupkg.sha512",
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.grpc\\1.17.0\\microsoft.azure.functions.worker.grpc.1.17.0.nupkg.sha512",
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.sdk\\1.17.4\\microsoft.azure.functions.worker.sdk.1.17.4.nupkg.sha512",
     "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\microsoft.azure.functions.worker.sdk.analyzers\\1.2.1\\microsoft.azure.functions.worker.sdk.analyzers.1.2.1.nupkg.sha512",

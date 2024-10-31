@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj": {}
+    "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\GitHub\\BackEnd\\InderBe\\InderBe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj": {
+    "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\GitHub\\BackEnd\\InderBe\\InderBe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj",
+        "projectUniqueName": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\GitHub\\BackEnd\\InderBe\\InderBe.csproj",
         "projectName": "InderBe",
-        "projectPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj",
+        "projectPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\GitHub\\BackEnd\\InderBe\\InderBe.csproj",
         "packagesPath": "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\obj\\",
+        "outputPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\GitHub\\BackEnd\\InderBe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jannic.Heidrich\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,6 +60,10 @@
             "Microsoft.Azure.Functions.Worker.Extensions.Http": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore": {
+              "target": "Package",
+              "version": "[1.2.1, )"
             },
             "Microsoft.Azure.Functions.Worker.Sdk": {
               "target": "Package",

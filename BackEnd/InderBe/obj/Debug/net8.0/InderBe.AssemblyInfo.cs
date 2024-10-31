@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InderBe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+978f8e8c64c7fc8ee4835a06dc692f0ec03ce9d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("InderBe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InderBe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
