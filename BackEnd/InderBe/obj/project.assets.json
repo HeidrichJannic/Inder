@@ -320,6 +320,31 @@
           }
         }
       },
+      "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.Functions.Worker": "1.21.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Abstractions": "1.3.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Http": "3.1.0",
+          "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers": "1.0.2"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers/1.0.2": {
+        "type": "package"
+      },
       "Microsoft.Azure.Functions.Worker.Grpc/1.17.0": {
         "type": "package",
         "dependencies": {
@@ -1891,6 +1916,33 @@
         "lib/netstandard2.0/Microsoft.Azure.Functions.Worker.Extensions.Http.xml",
         "microsoft.azure.functions.worker.extensions.http.3.1.0.nupkg.sha512",
         "microsoft.azure.functions.worker.extensions.http.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore/1.2.1": {
+      "sha512": "IIDv5U5Roskg/qC3iDqhcgpJ6/LTOq12BW8MfyB0r3nrTiWmkRaLUmyKpm1t/4XIV8LGKY9J/W+RJpYCF2qthA==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker.extensions.http.aspnetcore/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll",
+        "lib/net6.0/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.xml",
+        "microsoft.azure.functions.worker.extensions.http.aspnetcore.1.2.1.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.http.aspnetcore.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers/1.0.2": {
+      "sha512": "PrB2dW3LiEn3RdWyLMVQ5U6K497GMwu7TJxfakvV6OYP7nc3kbhDs0ekEtC4TfMcOMzz2B6Y8JTN4ofM2jQ9wQ==",
+      "type": "package",
+      "path": "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.Analyzers.dll",
+        "icon.png",
+        "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers.1.0.2.nupkg.sha512",
+        "microsoft.azure.functions.worker.extensions.http.aspnetcore.analyzers.nuspec"
       ]
     },
     "Microsoft.Azure.Functions.Worker.Grpc/1.17.0": {
@@ -4300,23 +4352,24 @@
       "Microsoft.Azure.Functions.Worker >= 1.23.0",
       "Microsoft.Azure.Functions.Worker.ApplicationInsights >= 1.2.0",
       "Microsoft.Azure.Functions.Worker.Extensions.Http >= 3.1.0",
+      "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore >= 1.2.1",
       "Microsoft.Azure.Functions.Worker.Sdk >= 1.17.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\": {}
+    "C:\\Users\\David.Schwieder\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj",
-      "projectName": "InderBe",
-      "projectPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj",
-      "packagesPath": "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\obj\\",
+      "projectUniqueName": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\Inder.Api.Core.Functions.csproj",
+      "projectName": "Inder.Api.Core.Functions",
+      "projectPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\Inder.Api.Core.Functions.csproj",
+      "packagesPath": "C:\\Users\\David.Schwieder\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jannic.Heidrich\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\David.Schwieder\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4324,6 +4377,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4363,6 +4417,10 @@
             "target": "Package",
             "version": "[3.1.0, )"
           },
+          "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore": {
+            "target": "Package",
+            "version": "[1.2.1, )"
+          },
           "Microsoft.Azure.Functions.Worker.Sdk": {
             "target": "Package",
             "version": "[1.17.4, )"
@@ -4387,7 +4445,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
