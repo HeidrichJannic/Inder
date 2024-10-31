@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBase", "..\..\DataBase\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inder.API.Core.Functions", "..\Inder.API.Core.Functions\Inder.API.Core.Functions.csproj", "{91457A1D-C193-4B09-80AC-B7CA059D6722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inder.Api.Core2", "Inder.Api.Core2\Inder.Api.Core2.csproj", "{3FCE90E1-D3D2-4A88-A927-DA82D5613F80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inder.Api.Core2", "Inder.Api.Core2\Inder.Api.Core2.csproj", "{3FCE90E1-D3D2-4A88-A927-DA82D5613F80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
