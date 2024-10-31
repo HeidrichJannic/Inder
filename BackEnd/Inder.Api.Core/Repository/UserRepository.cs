@@ -8,7 +8,7 @@ using Inder.Contracts.User;
 
 namespace Inder.Api.Core.Repository
 {
-    internal class UserRepository : IRepository<IUserDTO>
+    public class UserRepository : IRepository<IUserDTO>
     {
         public void Add(IUserDTO tempCreateUserDTO)
         {
