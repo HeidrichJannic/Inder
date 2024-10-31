@@ -8,13 +8,15 @@ import { ViewFooterComponent } from './shared/components/view-footer/view-footer
 import { OverviewComponent } from './components/overview/overview.component';
 import { UserService } from './shared/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
     ViewHeaderComponent,
-    ViewFooterComponent
+    ViewFooterComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
