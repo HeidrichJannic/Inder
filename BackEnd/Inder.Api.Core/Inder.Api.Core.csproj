@@ -11,4 +11,13 @@
     <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Inder.API.Core.Functions\Inder.API.Core.Functions.csproj" />
+    <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>
