@@ -5,38 +5,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Inder.Contracts.User;
+using Newtonsoft.Json;
+using DataBase;
 
-namespace Inder.Api.Core.Repository
+namespace Inder.Api.Core.Repository;
+
+public class UserRepository : IRepository<IUserDTO>
 {
-    public class UserRepository : IRepository<IUserDTO>
+    private readonly InderDbContext _dbContext;
+    public UserRepository(InderDbContext dbContext)
     {
-        public void Add(IUserDTO tempCreateUserDTO)
-        {
-            UserCreateDTO userData = (UserCreateDTO)tempCreateUserDTO;
+        _dbContext = dbContext;
 
-            UserDTO userDTO = new UserDTO()
-            {
-                Age = userData.Age,
-                Bio = userData.Bio,
-                Gender = userData.Gender,
-                Height = userData.Height,
-                LookingFor = userData.LookingFor,
-                Name = userData.Name,
-                ProfilePicture = userData.ProfilePicture,
-                Surname = userData.Surname,
-                Weight = userData.Weight,
-                Id = 0
-            };
-        }
+    }
+    public void Add(IUserDTO tempCreateUserDTO)
+    {
+        UserCreateDTO userData = (UserCreateDTO)tempCreateUserDTO;
 
-        public IEnumerable<IUserDTO> GetAll()
+        UserDTO userDTO = new UserDTO()
         {
-            throw new NotImplementedException();
-        }
+            Age = userData.Age,
+            Bio = userData.Bio,
+            Gender = userData.Gender,
+            Height = userData.Height,
+            LookingFor = userData.LookingFor,
+            Name = userData.Name,
+            ProfilePicture = userData.ProfilePicture,
+            Surname = userData.Surname,
+            Weight = userData.Weight,
+            Id = 0
+        };
+    }
 
-        public IUserDTO GetById(int Id)
-        {
-            throw new NotImplementedException();
-        }
+    public IEnumerable<IUserDTO> GetAll()
+    {
+        string userJsonFormat = JsonConvert.SerializeObject(_dbContext.Users.ToList());
+        List<UserDTO> userDTO = JsonConvert.DeserializeObject<List<UserDTO>>(userJsonFormat)!;
+
+        return userDTO;
+    }
+
+    public IUserDTO GetById(int Id)
+    {
+        string userJsonFormat = JsonConvert.SerializeObject(_dbContext.Users.Where(element => element.ID == Id).Select(i => i).FirstOrDefault());
+        UserDTO userDTO = JsonConvert.DeserializeObject<UserDTO>(userJsonFormat)!;
+
+        return userDTO; 
     }
 }
