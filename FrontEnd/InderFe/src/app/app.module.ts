@@ -9,6 +9,7 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { UserService } from './shared/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
+import { ViewErrorpageComponent } from './shared/components/view-errorpage/view-errorpage.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ViewProfileComponent } from './components/view-profile/view-profile.com
     OverviewComponent,
     ViewHeaderComponent,
     ViewFooterComponent,
-    ViewProfileComponent
+    ViewProfileComponent,
+    ViewErrorpageComponent
   ],
   imports: [
     BrowserModule,
