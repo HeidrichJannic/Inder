@@ -12,10 +12,10 @@ namespace DataBase
 
     public class Message
     {
-        public Message(int convoID,int fromUserID, string text, DateTime dateTime)
+        public Message(int convoID,int fromUserId, string text, DateTime dateTime)
         {
             ConvoID = convoID;
-            FromUserId = fromUserID;
+            FromUserId = fromUserId;
             Text = text;
             DateTime = dateTime;
         }
