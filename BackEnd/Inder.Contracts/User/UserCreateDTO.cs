@@ -24,5 +24,5 @@ public class UserCreateDTO : IUserDTO
     
     public string Bio { get; set; }
 
-    public string ProfilePicture { get; set; }
+    public byte[] ProfilePicture { get; set; }
 }

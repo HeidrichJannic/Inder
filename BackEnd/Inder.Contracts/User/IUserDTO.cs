@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inder.Contracts.User
 {
-    internal interface IUserDTO
+    public interface IUserDTO
     {
     }
 }
