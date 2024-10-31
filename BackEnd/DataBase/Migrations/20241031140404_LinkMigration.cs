@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataBase.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class LinkMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,7 +25,7 @@ namespace DataBase.Migrations
                     Gender = table.Column<int>(type: "int", nullable: false),
                     LookingFor = table.Column<int>(type: "int", nullable: false),
                     Bio = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                    ProfilePic = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
+                    ProfilePic = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

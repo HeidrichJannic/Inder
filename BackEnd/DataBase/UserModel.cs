@@ -4,7 +4,7 @@
 
     public class UserModel
     {
-        public UserModel(string name, string surname, Gender gender, byte[] profilePic)
+        public UserModel(string name, string surname, Gender gender, string profilePic)
         {
             Name = name;
             Surname = surname;
@@ -37,7 +37,7 @@
         public string? Bio { get; set; }
 
         [Required]
-        public byte[] ProfilePic { get; set; }
+        public string ProfilePic { get; set; }
 
         // Navigation properties
         public ICollection<RateModel> RatesFromUser { get; set; }

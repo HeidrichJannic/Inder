@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Gender } from '../../shared/types/models/gender';
 import { UserService } from '../../shared/services/user.service';
 import { User } from '../../shared/types/models/user';
 
