@@ -10,11 +10,10 @@ namespace DataBase
 {
     public class Match
     {
-        public Match(int firstUserId, int secondUserID, User secondUser)
+        public Match(int firstUserId, int secondUserId)
         {
             FirstUserId = firstUserId;
-            SecondUser = secondUser;
-            SecondUserId = secondUserID; 
+            SecondUserId = secondUserId; 
         }
 
         [Key]

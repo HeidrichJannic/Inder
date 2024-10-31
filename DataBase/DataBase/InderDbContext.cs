@@ -1,4 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Azure.Functions.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text.RegularExpressions;
+using System;
+
+[assembly: FunctionsStartup(typeof(DataBase.Startup))]
 
 namespace DataBase
 {
@@ -6,6 +13,11 @@ namespace DataBase
 
     public class InderDbContext : DbContext
     {
+        public InderDbContext(DbContextOptions<InderDbContext> options) : base(options)
+        {
+
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Rate> Rates { get; set; }
         public DbSet<Match> Matches { get; set; }
@@ -61,5 +73,24 @@ namespace DataBase
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }
+    public class InderContextFactory : IDesignTimeDbContextFactory<InderDbContext>
+    {
+        public InderDbContext CreateDbContext(string[] args)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<InderDbContext>();
+            optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("connectionString"));
 
+            return new InderDbContext(optionsBuilder.Options);
+        }
+    }
+
+    public class Startup : FunctionsStartup
+    {
+        public override void Configure(IFunctionsHostBuilder builder)
+        {
+            string SqlConnection = Environment.GetEnvironmentVariable("connectionString");
+            builder.Services.AddDbContext<InderDbContext>(
+                options => options.UseSqlServer(SqlConnection));
+        }
+    }
 }

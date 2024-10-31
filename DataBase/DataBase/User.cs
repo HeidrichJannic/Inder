@@ -9,12 +9,11 @@ namespace DataBase
 
     public class User
     {
-        public User(string name, string surname, Gender gender, LookingFor lookingFor, byte[] profilePic)
+        public User(string name, string surname, Gender gender, byte[] profilePic)
         {
             Name = name;
             Surname = surname;
             Gender = gender;
-            LookingFor = lookingFor;
             ProfilePic = profilePic;
         }
 
