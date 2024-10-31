@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj": {}
+    "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\InderBe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj": {
+    "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\InderBe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj",
+        "projectUniqueName": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\InderBe.csproj",
         "projectName": "InderBe",
-        "projectPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\InderBe.csproj",
-        "packagesPath": "C:\\Users\\Jannic.Heidrich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jannic.Heidrich\\source\\repos\\WorkshopC#\\BackEnd\\InderBe\\obj\\",
+        "projectPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\InderBe.csproj",
+        "packagesPath": "C:\\Users\\David.Schwieder\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jannic.Heidrich\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\David.Schwieder\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,6 +62,10 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
             "Microsoft.Azure.Functions.Worker.Sdk": {
               "target": "Package",
               "version": "[1.17.4, )"
@@ -85,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
