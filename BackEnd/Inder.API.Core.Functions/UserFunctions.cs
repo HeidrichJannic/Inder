@@ -2,15 +2,20 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
+using Inder.Api.Core.Repository;
+using Inder.Contracts.User;
+using Newtonsoft.Json;
 
 namespace Inder.API.Core.Functions
 {
     public class UserFunctions
     {
+        private readonly IRepository<IUserDTO> _userRepository;
         private readonly ILogger<UserFunctions> _logger;
 
-        public UserFunctions(ILogger<UserFunctions> logger)
+        public UserFunctions(ILogger<UserFunctions> logger, IRepository<IUserDTO> userRepository)
         {
+            _userRepository = userRepository;
             _logger = logger;
         }
 
@@ -20,7 +25,8 @@ namespace Inder.API.Core.Functions
             try
             {
                 _logger.LogInformation("C# HTTP trigger function processed a request.");
-                return new OkObjectResult("Welcome to Azure Functions!");
+                List<UserDTO> response = (List<UserDTO>)_userRepository.GetAll();
+                return new OkObjectResult(response);
             }
             catch (Exception ex)
             {
@@ -34,7 +40,8 @@ namespace Inder.API.Core.Functions
             try
             {
                 _logger.LogInformation("C# HTTP trigger function processed a request.");
-                return new OkObjectResult("Welcome to Azure Functions!");
+                UserDTO response = (UserDTO)_userRepository.GetById(userId);
+                return new OkObjectResult(response);
             }
             catch (Exception ex)
             {
@@ -48,7 +55,20 @@ namespace Inder.API.Core.Functions
             try
             {
                 _logger.LogInformation("C# HTTP trigger function processed a request.");
-                return new OkObjectResult("Welcome to Azure Functions!");
+                string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+
+                if (string.IsNullOrEmpty(requestBody))
+                {
+                    return new StatusCodeResult(StatusCodes.Status400BadRequest);
+                }
+                else
+                {
+                    UserCreateDTO userCreateDTO = JsonConvert.DeserializeObject<UserCreateDTO>(requestBody);
+
+                    _userRepository.Add(userCreateDTO);
+
+                    return new StatusCodeResult(StatusCodes.Status201Created);
+                }
             }
             catch (Exception ex)
             {
