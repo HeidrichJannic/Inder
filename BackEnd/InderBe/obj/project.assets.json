@@ -4366,7 +4366,7 @@
       "projectName": "Inder.Api.Core.Functions",
       "projectPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\Inder.Api.Core.Functions.csproj",
       "packagesPath": "C:\\Users\\David.Schwieder\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\obj\\",
+      "outputPath": "C:\\Users\\David.Schwieder\\source\\repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David.Schwieder\\AppData\\Roaming\\NuGet\\NuGet.Config",
