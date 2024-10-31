@@ -21,3 +21,9 @@ To start the Frontend locally:
 ```console
 ng serve
 ```
+
+If you have any execution problems try:
+
+```console
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
