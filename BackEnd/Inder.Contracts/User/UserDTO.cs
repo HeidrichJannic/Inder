@@ -2,7 +2,7 @@
 {
     public class UserDTO : IUserDTO
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
 
         public string Name { get; set; }
 
@@ -20,6 +20,6 @@
 
         public string Bio { get; set; }
 
-        public byte[] ProfilePicture { get; set; }
+        public byte[] ProfilePic { get; set; }
     }
 }
