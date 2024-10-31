@@ -4357,19 +4357,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\David.Schwieder\\.nuget\\packages\\": {}
+    "C:\\Users\\Patrik.Cerna\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\Inder.Api.Core.Functions.csproj",
+      "projectUniqueName": "C:\\VS\\InderBranch\\Inder\\BackEnd\\InderBe\\Inder.Api.Core.Functions.csproj",
       "projectName": "Inder.Api.Core.Functions",
-      "projectPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\Inder.Api.Core.Functions.csproj",
-      "packagesPath": "C:\\Users\\David.Schwieder\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David.Schwieder\\Source\\Repos\\HeidrichJannic\\Inder\\BackEnd\\InderBe\\obj\\",
+      "projectPath": "C:\\VS\\InderBranch\\Inder\\BackEnd\\InderBe\\Inder.Api.Core.Functions.csproj",
+      "packagesPath": "C:\\Users\\Patrik.Cerna\\.nuget\\packages\\",
+      "outputPath": "C:\\VS\\InderBranch\\Inder\\BackEnd\\InderBe\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\David.Schwieder\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Patrik.Cerna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4377,7 +4382,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4390,11 +4394,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4445,7 +4444,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
