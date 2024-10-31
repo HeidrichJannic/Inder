@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.DependencyInjection;
+using System.Text.RegularExpressions;
+using System;
 
 [assembly: FunctionsStartup(typeof(DataBase.Startup))]
 
@@ -92,7 +94,3 @@ namespace DataBase
         }
     }
 }
-
-
-
-
