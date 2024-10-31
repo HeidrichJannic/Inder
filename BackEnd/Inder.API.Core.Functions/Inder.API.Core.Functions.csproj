@@ -17,8 +17,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inder.Api.Core\Inder.Api.Core.csproj" />
     <ProjectReference Include="..\Inder.Contracts\Inder.Contracts.csproj" />
+    <ProjectReference Include="..\InderBe\Inder.Api.Core2\Inder.Api.Core2.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
