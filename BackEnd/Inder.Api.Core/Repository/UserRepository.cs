@@ -16,7 +16,6 @@ public class UserRepository : IRepository<IUserDTO>
     public UserRepository(InderDbContext dbContext)
     {
         _dbContext = dbContext;
-
     }
     public void Add(IUserDTO tempCreateUserDTO)
     {
