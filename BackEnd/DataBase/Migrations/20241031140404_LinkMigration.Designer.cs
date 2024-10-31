@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBase.Migrations
 {
     [DbContext(typeof(InderDbContext))]
-    [Migration("20241031122950_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20241031140404_LinkMigration")]
+    partial class LinkMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace DataBase.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DataBase.Convo", b =>
+            modelBuilder.Entity("DataBase.ConvoModel", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -44,7 +44,7 @@ namespace DataBase.Migrations
                     b.ToTable("Convos");
                 });
 
-            modelBuilder.Entity("DataBase.Match", b =>
+            modelBuilder.Entity("DataBase.MatchModel", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -97,7 +97,7 @@ namespace DataBase.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("DataBase.Rate", b =>
+            modelBuilder.Entity("DataBase.RateModel", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -123,7 +123,7 @@ namespace DataBase.Migrations
                     b.ToTable("Rates");
                 });
 
-            modelBuilder.Entity("DataBase.User", b =>
+            modelBuilder.Entity("DataBase.UserModel", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -152,9 +152,9 @@ namespace DataBase.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<byte[]>("ProfilePic")
+                    b.Property<string>("ProfilePic")
                         .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")
                         .IsRequired()
@@ -169,26 +169,26 @@ namespace DataBase.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("DataBase.Convo", b =>
+            modelBuilder.Entity("DataBase.ConvoModel", b =>
                 {
-                    b.HasOne("DataBase.Match", "Match")
+                    b.HasOne("DataBase.MatchModel", "Match")
                         .WithOne("Convo")
-                        .HasForeignKey("DataBase.Convo", "MatchID")
+                        .HasForeignKey("DataBase.ConvoModel", "MatchID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Match");
                 });
 
-            modelBuilder.Entity("DataBase.Match", b =>
+            modelBuilder.Entity("DataBase.MatchModel", b =>
                 {
-                    b.HasOne("DataBase.User", "FirstUser")
+                    b.HasOne("DataBase.UserModel", "FirstUser")
                         .WithMany("MatchesAsFirstUser")
                         .HasForeignKey("FirstUserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("DataBase.User", "SecondUser")
+                    b.HasOne("DataBase.UserModel", "SecondUser")
                         .WithMany("MatchesAsSecondUser")
                         .HasForeignKey("SecondUserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -201,13 +201,13 @@ namespace DataBase.Migrations
 
             modelBuilder.Entity("DataBase.Message", b =>
                 {
-                    b.HasOne("DataBase.Convo", "Convo")
+                    b.HasOne("DataBase.ConvoModel", "Convo")
                         .WithMany("Messages")
                         .HasForeignKey("ConvoID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DataBase.User", "FromUser")
+                    b.HasOne("DataBase.UserModel", "FromUser")
                         .WithMany()
                         .HasForeignKey("FromUserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -218,15 +218,15 @@ namespace DataBase.Migrations
                     b.Navigation("FromUser");
                 });
 
-            modelBuilder.Entity("DataBase.Rate", b =>
+            modelBuilder.Entity("DataBase.RateModel", b =>
                 {
-                    b.HasOne("DataBase.User", "FromUser")
+                    b.HasOne("DataBase.UserModel", "FromUser")
                         .WithMany("RatesFromUser")
                         .HasForeignKey("FromUserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("DataBase.User", "ToUser")
+                    b.HasOne("DataBase.UserModel", "ToUser")
                         .WithMany("RatesToUser")
                         .HasForeignKey("ToUserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -237,18 +237,18 @@ namespace DataBase.Migrations
                     b.Navigation("ToUser");
                 });
 
-            modelBuilder.Entity("DataBase.Convo", b =>
+            modelBuilder.Entity("DataBase.ConvoModel", b =>
                 {
                     b.Navigation("Messages");
                 });
 
-            modelBuilder.Entity("DataBase.Match", b =>
+            modelBuilder.Entity("DataBase.MatchModel", b =>
                 {
                     b.Navigation("Convo")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DataBase.User", b =>
+            modelBuilder.Entity("DataBase.UserModel", b =>
                 {
                     b.Navigation("MatchesAsFirstUser");
 
